@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heerenveen Roleplay • Staffinformatie</title>
+
+<style>
+
+/* =========================================================
+   HEERENVEEN ROLEPLAY
+   PREMIUM BLUE / WHITE DESIGN
+========================================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+
+    /* HV BLUE */
+    --blue:#0637E8;
+    --blue-2:#1455F5;
+    --blue-3:#2D78FF;
+    --blue-light:#61B8FF;
+    --blue-dark:#03237F;
+
+    /* BACKGROUND */
+    --bg:#EEF3FF;
+    --bg-2:#F7F9FF;
+
+    /* WHITE */
+    --white:#FFFFFF;
+    --white-soft:rgba(255,255,255,.82);
+
+    /* TEXT */
+    --text:#111C31;
+    --text-2:#4F5F78;
+    --text-3:#7C899E;
+
+    /* BORDERS */
+    --border:#DCE5F7;
+    --border-blue:rgba(6,55,232,.18);
+
+    /* SHADOWS */
+    --shadow:
+        0 20px 60px rgba(18,49,110,.09);
+
+    --shadow-blue:
+        0 15px 45px rgba(6,55,232,.16);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        Arial,
+        sans-serif;
+
+    color:var(--text);
+
+    background:
+
+        radial-gradient(
+            circle at 50% -15%,
+            rgba(6,55,232,.22),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at -10% 35%,
+            rgba(45,120,255,.13),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 110% 70%,
+            rgba(97,184,255,.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            180deg,
+            #E9EFFF 0%,
+            #F7F9FF 45%,
+            #EEF3FF 100%
+        );
+
+    overflow-x:hidden;
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    top:30%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6,55,232,.035),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(1200px, calc(100% - 32px));
+
+    margin:auto;
+
+    padding:
+        45px 0
+        50px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        28px
+        20px
+        42px;
+
+    margin-bottom:28px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.84),
+            rgba(255,255,255,.52)
+        );
+
+    border:1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        0 20px 70px rgba(35,65,130,.09);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+}
+
+
+/* glowing line inside hero */
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    top:-280px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6,55,232,.18),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+
+/* bottom accent */
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:150px;
+    height:4px;
+
+    border-radius:10px 10px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue-dark),
+            var(--blue),
+            var(--blue-light)
+        );
+
+    box-shadow:
+        0 0 20px rgba(6,55,232,.45);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+
+    position:relative;
+    z-index:2;
+
+    width:135px;
+    height:105px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 10px;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(6,55,232,.40)
+        )
+        drop-shadow(
+            0 0 22px
+            rgba(45,120,255,.22)
+        );
+
+    animation:
+        logoFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes logoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+h1{
+
+    position:relative;
+    z-index:2;
+
+    font-size:clamp(32px,5vw,52px);
+
+    font-weight:800;
+
+    letter-spacing:-1.5px;
+
+    color:var(--blue-dark);
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 4px 18px
+        rgba(6,55,232,.12);
+}
+
+
+.subtitle{
+
+    position:relative;
+    z-index:2;
+
+    color:var(--text-2);
+
+    font-size:16px;
+
+    letter-spacing:.15px;
+}
+
+
+/* =========================================================
+   SMALL HERO LABEL
+========================================================= */
+
+.header-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:18px;
+
+    padding:7px 14px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6,55,232,.10),
+            rgba(45,120,255,.06)
+        );
+
+    border:1px solid
+        rgba(6,55,232,.14);
+
+    color:var(--blue-dark);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.2px;
+}
+
+
+.header-label span{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--blue);
+
+    box-shadow:
+        0 0 10px
+        rgba(6,55,232,.75);
+
+    animation:pulse 2s infinite;
+}
+
+
+@keyframes pulse{
+
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.55;
+        transform:scale(.72);
+    }
+}
+
+
+/* =========================================================
+   MAIN CARDS
+========================================================= */
+
+.card{
+
+    position:relative;
+
+    margin-bottom:25px;
+
+    padding:29px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(249,251,255,.91)
+        );
+
+    border:1px solid
+        rgba(255,255,255,.95);
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(15px);
+
+    overflow:hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* subtle light */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    right:-180px;
+    top:-180px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6,55,232,.06),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+/* blue vertical accent */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:24px;
+    bottom:24px;
+    left:0;
+
+    width:4px;
+
+    border-radius:
+        0 8px 8px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--blue-3),
+            var(--blue-light)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(6,55,232,.18);
+}
+
+
+.card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(18,49,110,.12);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+h2{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:-.5px;
+
+    color:var(--blue-dark);
+}
+
+
+h2::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    margin-left:12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6,55,232,.16),
+            transparent
+        );
+}
+
+
+h3{
+
+    color:var(--text);
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+p,
+li{
+
+    color:var(--text-2);
+
+    line-height:1.72;
+}
+
+
+strong{
+
+    color:var(--blue-dark);
+}
+
+
+ul{
+
+    margin-top:8px;
+
+    padding-left:21px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    max-width:920px;
+
+    margin:
+        0 auto 7px;
+
+    text-align:center;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   RANK GRID
+========================================================= */
+
+.rank-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(290px,1fr)
+        );
+
+    gap:16px;
+}
+
+
+/* =========================================================
+   RANK CARD
+========================================================= */
+
+.rank{
+
+    position:relative;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #F7F9FF
+        );
+
+    border:1px solid
+        var(--border);
+
+    overflow:hidden;
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+}
+
+
+/* tiny blue light */
+
+.rank::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    right:-75px;
+    top:-75px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6,55,232,.10),
+            transparent 68%
+        );
+
+    transition:.25s ease;
+}
+
+
+/* left line */
+
+.rank::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:20px;
+    bottom:20px;
+
+    width:3px;
+
+    border-radius:0 5px 5px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--blue-light)
+        );
+
+    opacity:.7;
+}
+
+
+.rank:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.008);
+
+    border-color:
+        rgba(6,55,232,.30);
+
+    box-shadow:
+        0 18px 40px
+        rgba(6,55,232,.10);
+}
+
+
+.rank:hover::before{
+
+    transform:scale(1.5);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6,55,232,.14),
+            transparent 68%
+        );
+}
+
+
+/* =========================================================
+   RANK NUMBER
+========================================================= */
+
+.rank-number{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:38px;
+    height:25px;
+
+    padding:0 9px;
+
+    border-radius:8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6,55,232,.12),
+            rgba(45,120,255,.06)
+        );
+
+    border:1px solid
+        rgba(6,55,232,.12);
+
+    color:var(--blue);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+    margin-bottom:7px;
+}
+
+
+/* =========================================================
+   RANK TITLE
+========================================================= */
+
+.rank-title{
+
+    position:relative;
+    z-index:1;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    font-weight:800;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================================================
+   PERMISSIONS
+========================================================= */
+
+.permission{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    margin:7px 0;
+
+    font-size:14px;
+
+    line-height:1.55;
+
+    color:var(--text-2);
+}
+
+
+.permission strong{
+
+    white-space:nowrap;
+
+    color:var(--blue-dark);
+
+    font-weight:700;
+}
+
+
+.permission.none{
+
+    color:#8A96A9;
+}
+
+
+.permission.none strong{
+
+    color:#768399;
+}
+
+
+/* =========================================================
+   REQUIREMENTS
+========================================================= */
+
+.requirements{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
+    gap:17px;
+}
+
+
+.requirement{
+
+    position:relative;
+
+    padding:21px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF,
+            #F4F7FF
+        );
+
+    border:1px solid
+        var(--border);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+
+.requirement::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:18px;
+    bottom:18px;
+
+    width:3px;
+
+    border-radius:
+        0 5px 5px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--blue-light)
+        );
+}
+
+
+.requirement:hover{
+
+    transform:translateY(-4px);
+
+    border-color:
+        rgba(6,55,232,.28);
+
+    box-shadow:
+        0 15px 35px
+        rgba(6,55,232,.09);
+}
+
+
+.requirement h3{
+
+    color:var(--blue-dark);
+
+    font-weight:800;
+}
+
+
+.requirement li::marker{
+
+    color:var(--blue);
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.warning{
+
+    background:
+        linear-gradient(
+            125deg,
+            rgba(6,55,232,.07),
+            rgba(255,255,255,.96) 45%
+        );
+
+    border:
+        1px solid
+        rgba(6,55,232,.12);
+}
+
+
+.warning h2{
+
+    color:var(--blue-dark);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    padding:15px;
+
+    color:var(--text-3);
+
+    font-size:13px;
+}
+
+
+.footer strong{
+
+    color:var(--blue);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+
+    width:9px;
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#E7ECF8;
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--blue-light)
+        );
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .container{
+
+        width:
+            calc(100% - 22px);
+
+        padding:
+            18px 0
+            30px;
+    }
+
+
+    .header{
+
+        padding:
+            25px
+            14px
+            36px;
+
+        border-radius:24px;
+
+        margin-bottom:18px;
+    }
+
+
+    .logo{
+
+        width:105px;
+        height:85px;
+    }
+
+
+    h1{
+
+        font-size:34px;
+
+        letter-spacing:-1px;
+    }
+
+
+    .subtitle{
+
+        font-size:14px;
+
+        line-height:1.5;
+    }
+
+
+    .header-label{
+
+        font-size:10px;
+
+        letter-spacing:.8px;
+    }
+
+
+    .card{
+
+        padding:22px 17px;
+
+        border-radius:20px;
+
+        margin-bottom:18px;
+    }
+
+
+    h2{
+
+        font-size:23px;
+
+        line-height:1.25;
+    }
+
+
+    h2::after{
+
+        display:none;
+    }
+
+
+    .rank-grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+    }
+
+
+    .rank{
+
+        padding:18px;
+    }
+
+
+    .requirements{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+    }
+
+
+    .intro{
+
+        font-size:14px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:400px){
+
+    h1{
+
+        font-size:29px;
+    }
+
+
+    h2{
+
+        font-size:21px;
+    }
+
+
+    .permission{
+
+        font-size:13px;
+    }
+
+
+    .rank-title{
+
+        font-size:17px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="header">
+
+<img
+    src="https://i.ibb.co/GQGpBrxq/image0-removebg-preview.png"
+    alt="Heerenveen Roleplay Logo"
+    class="logo"
+>
+
+<h1>
+    Heerenveen Roleplay
+</h1>
+
+<p class="subtitle">
+    Officiële staffrangen, permissions en functie-eisen
+</p>
+
+<div class="header-label">
+    <span></span>
+    Officiële staffinformatie
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     ALGEMENE INFORMATIE
+===================================================== -->
+
+<section class="card">
+
+<h2>
+    📢 Algemene informatie
+</h2>
+
+<p class="intro">
+
+Op deze pagina staat per staffrang welke
+<strong>daadwerkelijke bevoegdheden</strong>
+beschikbaar zijn.
+
+Een hogere rang neemt de bevoegdheden van alle
+vorige rangen mee, tenzij anders vermeld.
+
+Ticket Support heeft bewust geen
+ingame-permissions.
+
+</p>
+
+<p class="intro">
+
+Let op: wanneer hogerop merkt dat je misbruik maakt
+van je staffbevoegdheden, kunnen deze direct worden
+afgenomen.
+
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     STAFFRANGEN
+===================================================== -->
+
+<section class="card">
+
+<h2>
+    🛡️ Staffrangen & permissions
+</h2>
+
+<div class="rank-grid">
+
+
+<!-- 01 -->
+
+<div class="rank">
+
+<div class="rank-number">
+01
+</div>
+
+<div class="rank-title">
+🎫 Ticket Support
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Tickets behandelen in de supportkanalen.
+</div>
+
+<div class="permission none">
+<strong>🎮 Ingame:</strong>
+Geen permissions.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen toegang.
+</div>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="rank">
+
+<div class="rank-number">
+02
+</div>
+
+<div class="rank-title">
+🛡️ Junior Moderator
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alles van Ticket Support.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+NoClip, Freeze, Goto en Bring.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="rank">
+
+<div class="rank-number">
+03
+</div>
+
+<div class="rank-title">
+🛡️ Moderator
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alles van Junior Moderator.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + Heal en Revive.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="rank">
+
+<div class="rank-number">
+04
+</div>
+
+<div class="rank-title">
+🛡️ Hoofd Moderator
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alles van Moderator.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + Godmode.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="rank">
+
+<div class="rank-number">
+05
+</div>
+
+<div class="rank-title">
+🔧 Junior Admin
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + voertuigen verwijderen en teleporteren naar waypoint.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="rank">
+
+<div class="rank-number">
+06
+</div>
+
+<div class="rank-title">
+🔧 Admin
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + teleporteren naar coördinaten.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="rank">
+
+<div class="rank-number">
+07
+</div>
+
+<div class="rank-title">
+🔧 Hoofd Admin
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + spelersitems verwijderen via de prullenbakfunctie.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="rank">
+
+<div class="rank-number">
+08
+</div>
+
+<div class="rank-title">
+📋 Junior Management
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + namen boven spelers weergeven.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="rank">
+
+<div class="rank-number">
+09
+</div>
+
+<div class="rank-title">
+📋 Management
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alles hierboven + spelerblips op de kaart.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="rank">
+
+<div class="rank-number">
+10
+</div>
+
+<div class="rank-title">
+📋 Hoofd Management
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ Staff:</strong>
+Toegang tot de takenfunctie.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="rank">
+
+<div class="rank-number">
+11
+</div>
+
+<div class="rank-title">
+👮 Junior Supervisor
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ Staff:</strong>
+Toezicht op lagere staffrangen.
+</div>
+
+<div class="permission none">
+<strong>🖥️ TXAdmin:</strong>
+Geen TXAdmin-toegang.
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="rank">
+
+<div class="rank-number">
+12
+</div>
+
+<div class="rank-title">
+👮 Supervisor
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+TXAdmin-toegang, NoClip, Goto en Bring.
+</div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="rank">
+
+<div class="rank-number">
+13
+</div>
+
+<div class="rank-title">
+👮 Head Supervisor
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Supervisor + Freeze.
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="rank">
+
+<div class="rank-number">
+14
+</div>
+
+<div class="rank-title">
+🏢 Assistent Beheer
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Head Supervisor + voertuig spawn,
+voertuig verwijderen, voertuig boosten en voertuigen maken.
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="rank">
+
+<div class="rank-number">
+15
+</div>
+
+<div class="rank-title">
+🏢 Beheer
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Assistent Beheer + wereld herstellen.
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="rank">
+
+<div class="rank-number">
+16
+</div>
+
+<div class="rank-title">
+🏢 Hoofd Beheer
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions + warns uitdelen.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle TXAdmin-bevoegdheden van Beheer.
+</div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="rank">
+
+<div class="rank-number">
+17
+</div>
+
+<div class="rank-title">
+🏛️ Mede Bestuur
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Hoofd Beheer + spelers kicken.
+</div>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="rank">
+
+<div class="rank-number">
+18
+</div>
+
+<div class="rank-title">
+🏛️ Bestuur
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Mede Bestuurder + spelers bannen.
+</div>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="rank">
+
+<div class="rank-number">
+19
+</div>
+
+<div class="rank-title">
+⚖️ Hoge Raad
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alles van Bestuur + serverlogs bekijken.
+</div>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="rank">
+
+<div class="rank-number">
+20
+</div>
+
+<div class="rank-title">
+🏙️ Burgemeester
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+Geen extra gemeentelijke FiveM-permission.
+</div>
+
+</div>
+
+
+<!-- 21 -->
+
+<div class="rank">
+
+<div class="rank-number">
+21
+</div>
+
+<div class="rank-title">
+🏛️ Vice Directeur
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 22 -->
+
+<div class="rank">
+
+<div class="rank-number">
+22
+</div>
+
+<div class="rank-title">
+🏛️ Directeur
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions + mededeling-permission.
+</div>
+
+</div>
+
+
+<!-- 23 -->
+
+<div class="rank">
+
+<div class="rank-number">
+23
+</div>
+
+<div class="rank-title">
+💼 Adviseur
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 24 -->
+
+<div class="rank">
+
+<div class="rank-number">
+24
+</div>
+
+<div class="rank-title">
+🔍 Keurmeester
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 25 -->
+
+<div class="rank">
+
+<div class="rank-number">
+25
+</div>
+
+<div class="rank-title">
+💰 Boekhouder
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 26 -->
+
+<div class="rank">
+
+<div class="rank-number">
+26
+</div>
+
+<div class="rank-title">
+🏗️ The Architect
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 27 -->
+
+<div class="rank">
+
+<div class="rank-number">
+27
+</div>
+
+<div class="rank-title">
+🏗️ Lead Architect
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 28 -->
+
+<div class="rank">
+
+<div class="rank-number">
+28
+</div>
+
+<div class="rank-title">
+💼 Executive Manager
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 29 -->
+
+<div class="rank">
+
+<div class="rank-number">
+29
+</div>
+
+<div class="rank-title">
+💼 Chief Executive Manager
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 30 -->
+
+<div class="rank">
+
+<div class="rank-number">
+30
+</div>
+
+<div class="rank-title">
+💼 Lead Manager
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 31 -->
+
+<div class="rank">
+
+<div class="rank-number">
+31
+</div>
+
+<div class="rank-title">
+⚖️ Rechter
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 32 -->
+
+<div class="rank">
+
+<div class="rank-number">
+32
+</div>
+
+<div class="rank-title">
+🏛️ Voorzitter
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Alle eerdere supportbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions.
+</div>
+
+</div>
+
+
+<!-- 33 -->
+
+<div class="rank">
+
+<div class="rank-number">
+33
+</div>
+
+<div class="rank-title">
+👑 Stad beheerder
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Volledige supporttoegang.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Volledige toegang.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Volledige toegang tot TXAdmin.
+</div>
+
+</div>
+
+
+<!-- 34 -->
+
+<div class="rank">
+
+<div class="rank-number">
+34
+</div>
+
+<div class="rank-title">
+👑 Mede-eigenaar
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Volledige supporttoegang.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Alle eerdere ingame-permissions.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Alle eerdere TXAdmin-permissions + volledige beheertoegang binnen de toegewezen serverrechten.
+</div>
+
+</div>
+
+
+<!-- 35 -->
+
+<div class="rank">
+
+<div class="rank-number">
+35
+</div>
+
+<div class="rank-title">
+👑 Founders
+</div>
+
+<div class="permission">
+<strong>🎫 Support:</strong>
+Volledige toegang.
+</div>
+
+<div class="permission">
+<strong>🎮 Ingame:</strong>
+Volledige ingame staffbevoegdheden.
+</div>
+
+<div class="permission">
+<strong>🖥️ TXAdmin:</strong>
+Volledige TXAdmin-toegang en alle beschikbare serverbeheermogelijkheden.
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     FUNCTIE-EISEN
+===================================================== -->
+
+<section class="card">
+
+<h2>
+    📋 Functie-eisen
+</h2>
+
+<p style="margin-bottom:20px;">
+Wil je solliciteren voor één van onderstaande functies?
+Zorg er dan voor dat je aan alle eisen voldoet.
+</p>
+
+<div class="requirements">
+
+
+<div class="requirement">
+
+<h3>
+👔 Staff Coördinator
+</h3>
+
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Directeur of hoger</li>
+<li>Sollicitatie vereist</li>
+</ul>
+
+</div>
+
+
+<div class="requirement">
+
+<h3>
+💰 Refund Coördinator
+</h3>
+
+<ul>
+<li>Minimaal 15 jaar</li>
+<li>Rang: Keurmeester of hoger</li>
+<li>Sollicitatie vereist</li>
+<li>Toestemming van Stadsbeheer vereist</li>
+</ul>
+
+</div>
+
+
+<div class="requirement">
+
+<h3>
+🎉 Event Coördinator
+</h3>
+
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Head Supervisor</li>
+<li>TX-permissies vereist</li>
+<li>Sollicitatie vereist</li>
+</ul>
+
+</div>
+
+
+<div class="requirement">
+
+<h3>
+📑 Sollicitatie Behandelaar
+</h3>
+
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Management of hoger</li>
+<li>Sollicitatie vereist</li>
+</ul>
+
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     BELANGRIJK
+===================================================== -->
+
+<section class="card warning">
+
+<h2>
+    ⚠️ Belangrijk
+</h2>
+
+<ul>
+
+<li>
+Een hogere rang neemt de bevoegdheden van de vorige rangen mee.
+</li>
+
+<li>
+De genoemde TXAdmin-permissions moeten daadwerkelijk aan de betreffende rang zijn toegewezen in TXAdmin.
+</li>
+
+<li>
+Ticket Support heeft bewust geen ingame- of TXAdmin-permissions.
+</li>
+
+<li>
+Functies zoals Burgemeester, Rechter en Voorzitter geven op zichzelf geen extra FiveM-permission.
+</li>
+
+<li>
+Alleen daadwerkelijk toegewezen FiveM- en TXAdmin-permissions gelden.
+</li>
+
+<li>
+Misbruik van staffbevoegdheden kan leiden tot het intrekken van staffrechten.
+</li>
+
+</ul>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+Heerenveen Roleplay
+&nbsp;•&nbsp;
+<strong>Credits naar Redstar en Osama</strong>
+
+</footer>
+
+
+</div>
+
+</body>
+</html>
