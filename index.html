@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heerenveen Roleplay - Staffinformatie</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(180deg,#07131f,#02070b);
+    color:#f3f4f6;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin:0 0 8px;
+    color:#dff6ff;
+    text-shadow:0 0 20px rgba(125,211,252,.25);
+}
+
+.subtitle{
+    text-align:center;
+    color:#a9c9d8;
+    margin:0 0 35px;
+}
+
+.card{
+    background:rgba(8,22,32,.96);
+    border:1px solid rgba(125,211,252,.18);
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:24px;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+h2{
+    margin:0 0 18px;
+    font-size:28px;
+    color:#bae6fd;
+}
+
+h3{
+    margin:0 0 10px;
+    font-size:20px;
+    color:#dff6ff;
+}
+
+p,li{
+    line-height:1.7;
+    color:#dbeafe;
+}
+
+ul{
+    margin:8px 0 0;
+    padding-left:22px;
+}
+
+.intro{
+    text-align:center;
+    color:#c5dce8;
+}
+
+.rank-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+}
+
+.rank{
+    padding:17px;
+    border:1px solid rgba(125,211,252,.14);
+    border-radius:14px;
+    background:rgba(125,211,252,.045);
+    transition:.2s ease;
+}
+
+.rank:hover{
+    border-color:rgba(125,211,252,.35);
+    background:rgba(125,211,252,.075);
+    transform:translateY(-2px);
+}
+
+.rank-number{
+    color:#7dd3fc;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.rank-title{
+    color:#dff6ff;
+    font-size:18px;
+    font-weight:bold;
+    margin:4px 0 8px;
+}
+
+.rank p{
+    margin:0;
+    color:#c7dbe5;
+    font-size:14px;
+}
+
+.requirements{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:16px;
+}
+
+.requirement{
+    padding:18px;
+    border-radius:14px;
+    background:rgba(125,211,252,.045);
+    border:1px solid rgba(125,211,252,.14);
+    transition:.2s ease;
+}
+
+.requirement:hover{
+    border-color:rgba(125,211,252,.35);
+    background:rgba(125,211,252,.075);
+}
+
+.requirement ul{
+    margin:0;
+}
+
+.requirement li::marker{
+    color:#7dd3fc;
+}
+
+.warning{
+    border-left:4px solid #7dd3fc;
+    background:rgba(125,211,252,.055);
+}
+
+.warning h2{
+    color:#7dd3fc;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#7f9eac;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+    h1{
+        font-size:32px;
+    }
+
+    .card{
+        padding:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏛️ Heerenveen Roleplay</h1>
+<p class="subtitle">Officiële staffrangen, permissions en functie-eisen</p>
+
+<div class="card">
+<h2>📢 Algemene informatie</h2>
+<p class="intro">
+Op deze pagina vind je de volledige staffstructuur van
+<strong>Heerenveen Roleplay</strong>. Per rang staat aangegeven
+welke bevoegdheden erbij horen. Daarnaast vind je de eisen voor
+verschillende coördinatorfuncties.
+</p>
+</div>
+
+<div class="card">
+<h2>🛡️ Staffrangen & permissions</h2>
+
+<div class="rank-grid">
+
+<div class="rank">
+<div class="rank-number">01</div>
+<div class="rank-title">🎫 Ticket Support</div>
+<p>Tickets behandelen en staffzaken afhandelen.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">02</div>
+<div class="rank-title">🛡️ Junior Moderator</div>
+<p>Alles van Ticket Support, plus NoClip, Freeze, Goto en Bring.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">03</div>
+<div class="rank-title">🛡️ Moderator</div>
+<p>Alles van Junior Moderator, plus Heal en Revive.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">04</div>
+<div class="rank-title">🛡️ Hoofd Moderator</div>
+<p>Alles van Moderator, plus Godmode en Skinmenu.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">05</div>
+<div class="rank-title">🔧 Junior Admin</div>
+<p>Alles van Hoofd Moderator, plus voertuigen verwijderen en teleporteren naar waypoint.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">06</div>
+<div class="rank-title">🔧 Admin</div>
+<p>Alles van Junior Admin, plus teleporteren naar coördinaten en Routing Bucket.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">07</div>
+<div class="rank-title">🔧 Hoofd Admin</div>
+<p>Alles van Admin, plus spelers en voertuigen verwijderen via de prullenbak.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">08</div>
+<div class="rank-title">📋 Junior Management</div>
+<p>Alles van Hoofd Admin, plus namen boven spelers tonen.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">09</div>
+<div class="rank-title">📋 Management</div>
+<p>Alles van Junior Management, plus spelerblips op de kaart.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">10</div>
+<div class="rank-title">📋 Hoofd Management</div>
+<p>Alles van Management, plus uitgebreide staffbeheertools.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">11</div>
+<div class="rank-title">👮 Junior Supervisor</div>
+<p>Alles van Hoofd Management, plus supervisietools.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">12</div>
+<div class="rank-title">👮 Supervisor</div>
+<p>Alles van Junior Supervisor, plus uitgebreide staffbeheerfuncties.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">13</div>
+<div class="rank-title">👮 Head Supervisor</div>
+<p>Alles van Supervisor, plus volledige supervisiebevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">14</div>
+<div class="rank-title">🏢 Assistent Beheer</div>
+<p>Alles van Head Supervisor, plus aanvullende beheertools.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">15</div>
+<div class="rank-title">🏢 Beheer</div>
+<p>Alles van Assistent Beheer, plus uitgebreide beheerfuncties.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">16</div>
+<div class="rank-title">🏢 Hoofd Beheer</div>
+<p>Alles van Beheer, plus volledige beheerbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">17</div>
+<div class="rank-title">🏛️ Mede Bestuurder</div>
+<p>Alles van Hoofd Beheer, plus bestuurlijke bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">18</div>
+<div class="rank-title">🏛️ Bestuurder</div>
+<p>Alles van Mede Bestuurder, plus uitgebreide bestuurlijke bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">19</div>
+<div class="rank-title">⚖️ Hoge Raad</div>
+<p>Alles van Bestuurder, plus hoogste besluitvormingsbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">20</div>
+<div class="rank-title">🏙️ Burgemeester</div>
+<p>Alles van Hoge Raad, plus gemeentelijke bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">21</div>
+<div class="rank-title">🏛️ Vice Directeur</div>
+<p>Alles van Burgemeester, plus directiebevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">22</div>
+<div class="rank-title">🏛️ Directeur</div>
+<p>Alles van Vice Directeur, plus volledige directiebevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">23</div>
+<div class="rank-title">💼 Adviseur</div>
+<p>Alles van Directeur, plus adviserende en strategische bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">24</div>
+<div class="rank-title">🔍 Keurmeester</div>
+<p>Alles van Adviseur, plus keurings- en controlebevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">25</div>
+<div class="rank-title">💰 Boekhouder</div>
+<p>Alles van Keurmeester, plus financiële bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">26</div>
+<div class="rank-title">🏗️ The Architect</div>
+<p>Alles van Boekhouder, plus architectuur- en developmentbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">27</div>
+<div class="rank-title">🏗️ Lead Architect</div>
+<p>Alles van The Architect, plus geavanceerde developmentbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">28</div>
+<div class="rank-title">💼 Executive Manager</div>
+<p>Alles van Lead Architect, plus uitvoerende managementbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">29</div>
+<div class="rank-title">💼 Chief Executive Manager</div>
+<p>Alles van Executive Manager, plus hogere executive bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">30</div>
+<div class="rank-title">💼 Lead Manager</div>
+<p>Alles van Chief Executive Manager, plus volledige managementbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">31</div>
+<div class="rank-title">⚖️ Rechter</div>
+<p>Alles van Lead Manager, plus rechterlijke bevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">32</div>
+<div class="rank-title">🏛️ Voorzitter</div>
+<p>Alles van Rechter, plus voorzittersbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">33</div>
+<div class="rank-title">👑 Mede-eigenaar</div>
+<p>Alles van Voorzitter, plus eigenaarsbevoegdheden.</p>
+</div>
+
+<div class="rank">
+<div class="rank-number">34</div>
+<div class="rank-title">👑 Founders</div>
+<p>Alle permissions en volledige toegang.</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>📋 Functie-eisen</h2>
+
+<p>
+Wil je solliciteren voor één van onderstaande functies?
+Zorg er dan voor dat je aan alle eisen voldoet.
+</p>
+
+<div class="requirements">
+
+<div class="requirement">
+<h3>👔 Staff Coördinator</h3>
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Directeur of hoger</li>
+<li>Sollicitatie vereist</li>
+</ul>
+</div>
+
+<div class="requirement">
+<h3>💰 Refund Coördinator</h3>
+<ul>
+<li>Minimaal 15 jaar</li>
+<li>Rang: Keurmeester of hoger</li>
+<li>Sollicitatie vereist</li>
+<li>Toestemming van Stadsbeheer vereist</li>
+</ul>
+</div>
+
+<div class="requirement">
+<h3>🎉 Event Coördinator</h3>
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Head Supervisor</li>
+<li>TX-permissies vereist</li>
+<li>Sollicitatie vereist</li>
+</ul>
+</div>
+
+<div class="requirement">
+<h3>📑 Sollicitatie Behandelaar</h3>
+<ul>
+<li>Minimaal 14 jaar</li>
+<li>Rang: Management of hoger</li>
+<li>Sollicitatie vereist</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="card warning">
+<h2>⚠️ Belangrijk</h2>
+
+<ul>
+<li>Je moet aan alle eisen voldoen.</li>
+<li>Voldoe je niet aan één van de eisen? Dan kun je niet worden aangenomen voor de functie.</li>
+<li>Heb je vragen? Neem contact op met het verantwoordelijke management.</li>
+</ul>
+</div>
+
+<div class="footer">
+Heerenveen Roleplay • Staffstructuur & functie-eisen
+</div>
+
+</div>
+
+</body>
+</html>
