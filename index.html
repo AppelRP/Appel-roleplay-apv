@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro Roleplay | Pechhulp Handboek</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --blue:#49D6FF;
+    --blue-2:#28BFF2;
+    --blue-3:#83E8FF;
+    --blue-light:#B8F4FF;
+    --blue-dark:#08799E;
+
+    --bg:#EAFBFF;
+    --bg-2:#F8FEFF;
+
+    --white:#FFFFFF;
+    --text:#10202A;
+    --text-2:#506773;
+    --text-3:#8297A1;
+
+    --border:rgba(103,190,215,.28);
+
+    --shadow:
+        0 25px 80px rgba(31,130,160,.13);
+
+    --shadow-blue:
+        0 20px 60px rgba(45,196,232,.20);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    font-family:"Segoe UI",Inter,Arial,sans-serif;
+    color:var(--text);
+    background:
+        radial-gradient(
+            ellipse 900px 500px at 50% -120px,
+            rgba(73,214,255,.35),
+            transparent 70%
+        ),
+        radial-gradient(
+            circle 500px at -10% 25%,
+            rgba(131,232,255,.20),
+            transparent 70%
+        ),
+        radial-gradient(
+            circle 550px at 110% 65%,
+            rgba(73,214,255,.16),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #DDF8FF 0%,
+            #F8FEFF 42%,
+            #E9FAFF 100%
+        );
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(20,170,205,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(20,170,205,.025) 1px,transparent 1px);
+    background-size:42px 42px;
+    mask-image:linear-gradient(to bottom,black,transparent 85%);
+    pointer-events:none;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:850px;
+    height:850px;
+    left:50%;
+    top:35%;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle,rgba(73,214,255,.055),transparent 68%);
+    pointer-events:none;
+    z-index:-1;
+}
+
+.container{
+    width:min(1200px,calc(100% - 32px));
+    margin:auto;
+    padding:55px 0 60px;
+}
+
+/* HERO */
+
+.header{
+    position:relative;
+    text-align:center;
+    padding:48px 25px 50px;
+    margin-bottom:30px;
+    border-radius:32px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.94),
+            rgba(238,251,255,.78)
+        );
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:
+        0 30px 90px rgba(25,120,150,.14),
+        inset 0 1px 0 rgba(255,255,255,.95);
+    backdrop-filter:blur(22px);
+    overflow:hidden;
+}
+
+.header::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:400px;
+    top:-330px;
+    left:50%;
+    transform:translateX(-50%);
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(73,214,255,.38),
+            rgba(131,232,255,.10) 40%,
+            transparent 72%
+        );
+}
+
+.header::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:120px;
+    bottom:-90px;
+    left:50%;
+    transform:translateX(-50%);
+    background:radial-gradient(
+        ellipse,
+        rgba(73,214,255,.35),
+        transparent 70%
+    );
+    filter:blur(12px);
+}
+
+.logo{
+    position:relative;
+    z-index:2;
+    width:125px;
+    height:125px;
+    margin:0 auto 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(207,247,255,.80)
+        );
+    border:2px solid rgba(73,214,255,.30);
+    box-shadow:
+        0 15px 45px rgba(41,180,215,.20),
+        inset 0 1px 0 white;
+    color:var(--blue-2);
+    font-size:54px;
+    animation:logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
+}
+
+h1{
+    position:relative;
+    z-index:2;
+    font-size:clamp(34px,5vw,54px);
+    font-weight:850;
+    letter-spacing:-1.8px;
+    margin-bottom:11px;
+    background:
+        linear-gradient(
+            135deg,
+            #07546E 0%,
+            #0BAED8 48%,
+            #67DFFF 100%
+        );
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    position:relative;
+    z-index:2;
+    color:var(--text-2);
+    font-size:16px;
+}
+
+.header-label{
+    position:relative;
+    z-index:2;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-top:20px;
+    padding:8px 15px;
+    border-radius:50px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(73,214,255,.17),
+            rgba(131,232,255,.07)
+        );
+    border:1px solid rgba(73,190,215,.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.8),
+        0 8px 25px rgba(45,190,220,.07);
+    color:var(--blue-dark);
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.3px;
+}
+
+.header-label span{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--blue-2);
+    box-shadow:
+        0 0 0 4px rgba(73,214,255,.10),
+        0 0 14px rgba(73,214,255,.8);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.55;transform:scale(.72)}
+}
+
+/* CARDS */
+
+.card{
+    position:relative;
+    margin-bottom:27px;
+    padding:30px;
+    border-radius:25px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.94),
+            rgba(247,253,255,.80)
+        );
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:
+        0 25px 70px rgba(30,110,135,.10),
+        inset 0 1px 0 rgba(255,255,255,.95);
+    backdrop-filter:blur(20px);
+    overflow:hidden;
+    transition:.28s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:22px;
+    bottom:22px;
+    left:0;
+    width:4px;
+    border-radius:0 8px 8px 0;
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue-dark),
+            var(--blue-2),
+            var(--blue-light)
+        );
+    box-shadow:0 0 18px rgba(73,214,255,.35);
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:220px;
+    right:-260px;
+    top:-170px;
+    background:radial-gradient(
+        ellipse,
+        rgba(73,214,255,.13),
+        transparent 68%
+    );
+    pointer-events:none;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+    box-shadow:
+        0 30px 85px rgba(25,105,130,.14),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+h2{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin-bottom:21px;
+    font-size:28px;
+    font-weight:850;
+    letter-spacing:-.6px;
+    color:var(--blue-dark);
+}
+
+h2::after{
+    content:"";
+    flex:1;
+    height:1px;
+    margin-left:12px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(73,190,215,.30),
+            rgba(73,190,215,.05),
+            transparent
+        );
+}
+
+p,li{
+    color:var(--text-2);
+    line-height:1.72;
+}
+
+strong{
+    color:var(--blue-dark);
+}
+
+ul{
+    margin-top:8px;
+    padding-left:21px;
+}
+
+li::marker{
+    color:var(--blue-2);
+}
+
+.intro{
+    max-width:920px;
+    margin:0 auto 8px;
+    text-align:center;
+    font-size:15px;
+}
+
+/* GRID */
+
+.rank-grid,
+.requirements{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:17px;
+}
+
+.rank,
+.requirement{
+    position:relative;
+    padding:21px;
+    border-radius:19px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(239,251,255,.84)
+        );
+    border:1px solid rgba(150,210,225,.35);
+    box-shadow:
+        0 8px 25px rgba(25,100,120,.055),
+        inset 0 1px 0 rgba(255,255,255,.95);
+    overflow:hidden;
+    transition:.24s ease;
+}
+
+.rank::after,
+.requirement::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:20px;
+    bottom:20px;
+    width:3px;
+    border-radius:0 5px 5px 0;
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue-2),
+            var(--blue-light)
+        );
+}
+
+.rank:hover,
+.requirement:hover{
+    transform:translateY(-5px);
+    border-color:rgba(45,190,220,.40);
+    box-shadow:
+        0 20px 45px rgba(45,190,220,.12),
+        inset 0 1px 0 white;
+}
+
+.rank-number{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:40px;
+    height:26px;
+    padding:0 9px;
+    border-radius:8px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(73,214,255,.17),
+            rgba(131,232,255,.06)
+        );
+    border:1px solid rgba(73,190,215,.20);
+    color:var(--blue-dark);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.rank-title{
+    color:var(--text);
+    font-size:18px;
+    font-weight:850;
+    margin-bottom:14px;
+}
+
+.permission{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin:7px 0;
+    padding-bottom:6px;
+    font-size:14px;
+    line-height:1.55;
+    color:var(--text-2);
+    border-bottom:1px solid rgba(150,190,205,.16);
+}
+
+.permission:last-child{
+    border-bottom:none;
+}
+
+.permission strong{
+    white-space:nowrap;
+    color:var(--blue-dark);
+}
+
+.requirement{
+    padding:22px;
+}
+
+.requirement h3{
+    color:var(--blue-dark);
+    font-weight:850;
+    margin-bottom:10px;
+}
+
+/* TABLES */
+
+.table-wrap{
+    overflow-x:auto;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:500px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    text-align:left;
+    padding:15px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(73,214,255,.18),
+            rgba(131,232,255,.10)
+        );
+    color:var(--blue-dark);
+    font-size:14px;
+}
+
+td{
+    padding:14px 15px;
+    color:var(--text-2);
+    border-top:1px solid rgba(120,180,195,.16);
+    background:rgba(255,255,255,.45);
+}
+
+tr:hover td{
+    background:rgba(73,214,255,.055);
+}
+
+/* SPECIAL */
+
+.warning{
+    background:
+        linear-gradient(
+            125deg,
+            rgba(73,214,255,.12),
+            rgba(255,255,255,.92) 48%,
+            rgba(229,250,255,.85)
+        );
+    border:1px solid rgba(73,190,215,.20);
+}
+
+.callout{
+    margin-top:18px;
+    padding:18px 20px;
+    border-radius:15px;
+    background:rgba(73,214,255,.075);
+    border:1px solid rgba(73,190,215,.18);
+}
+
+.callout strong{
+    color:var(--blue-dark);
+}
+
+.footer{
+    position:relative;
+    text-align:center;
+    margin-top:38px;
+    padding:20px;
+    color:var(--text-3);
+    font-size:13px;
+}
+
+.footer::before{
+    content:"";
+    display:block;
+    width:120px;
+    height:1px;
+    margin:0 auto 18px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(73,190,215,.35),
+            transparent
+        );
+}
+
+.footer strong{
+    color:var(--blue-dark);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .container{
+        width:calc(100% - 22px);
+        padding:20px 0 32px;
+    }
+
+    .header{
+        padding:30px 15px 40px;
+        border-radius:25px;
+        margin-bottom:19px;
+    }
+
+    .logo{
+        width:100px;
+        height:100px;
+        font-size:43px;
+    }
+
+    h1{
+        font-size:34px;
+        letter-spacing:-1px;
+    }
+
+    .subtitle{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .header-label{
+        font-size:10px;
+        letter-spacing:.8px;
+    }
+
+    .card{
+        padding:23px 17px;
+        border-radius:20px;
+        margin-bottom:19px;
+    }
+
+    h2{
+        font-size:23px;
+        line-height:1.25;
+    }
+
+    h2::after{
+        display:none;
+    }
+
+    .rank-grid,
+    .requirements{
+        grid-template-columns:1fr;
+        gap:13px;
+    }
+
+    .intro{
+        font-size:14px;
+    }
+}
+
+@media(max-width:400px){
+
+    h1{
+        font-size:29px;
+    }
+
+    h2{
+        font-size:21px;
+    }
+
+    .permission{
+        font-size:13px;
+    }
+
+    .rank-title{
+        font-size:17px;
+    }
+}
+
+::-webkit-scrollbar{
+    width:9px;
+}
+
+::-webkit-scrollbar-track{
+    background:#DFF6FC;
+}
+
+::-webkit-scrollbar-thumb{
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue-2),
+            var(--blue-light)
+        );
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="header">
+
+    <div class="logo">🚗</div>
+
+    <h1>Retro Roleplay</h1>
+
+    <div class="subtitle">
+        Pechhulp &amp; Wegenwacht Handboek
+    </div>
+
+    <div class="header-label">
+        <span></span>
+        ANWB • PECHHULP • RETRO ROLEPLAY
+    </div>
+
+</header>
+
+
+<!-- INLEIDING -->
+
+<section class="card">
+
+    <h2>📘 1. Inleiding</h2>
+
+    <p class="intro">
+        Dit document is opgesteld om de procedures en richtlijnen voor de
+        <strong>ANWB / Pechhulp van Retro Roleplay</strong> te standaardiseren.
+        Het biedt duidelijkheid over de rollen, verantwoordelijkheden en
+        procedures bij het verlenen van hulp bij pech en noodgevallen op de weg.
+    </p>
+
+</section>
+
+
+<!-- RANGEN -->
+
+<section class="card">
+
+    <h2>👨‍🔧 2. Structuur &amp; Rangen</h2>
+
+    <div class="rank-grid">
+
+        <div class="rank">
+            <div class="rank-number">01</div>
+            <div class="rank-title">Stagiair</div>
+            <div class="permission">
+                In opleiding en assisteert ervaren medewerkers.
+            </div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-number">02</div>
+            <div class="rank-title">Wegenwacht</div>
+            <div class="permission">
+                Verantwoordelijk voor het verlenen van pechhulp, zoals het
+                slepen van voertuigen, banden verwisselen en brandstof bijvullen.
+            </div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-number">03</div>
+            <div class="rank-title">Senior Wegenwacht</div>
+            <div class="permission">
+                Leidinggevend bij grotere pechgevallen en verantwoordelijk
+                voor de coördinatie van meerdere teams.
+            </div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-number">04</div>
+            <div class="rank-title">Hoofd Wegenwacht</div>
+            <div class="permission">
+                Algemene leiding van de ANWB-dienst binnen Retro Roleplay.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GEDRAGSREGELS -->
+
+<section class="card">
+
+    <h2>🛡️ 3. Algemene Gedragsregels</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>Professionaliteit</h3>
+            <p>
+                Gedraag je altijd professioneel, zowel in als buiten dienst.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Respect</h3>
+            <p>
+                Behandel collega’s, burgers en andere hulpdiensten met respect.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Roleplay</h3>
+            <p>
+                Blijf in karakter (In-Character). Gebruik OOC alleen als dit
+                strikt noodzakelijk is.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Serverregels</h3>
+            <p>
+                Houd je aan de serverregels, zoals anti-RDM, anti-VDM en
+                overige serverregels.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Veiligheid</h3>
+            <p>
+                Zorg voor een veilige werkplek en respecteer de veiligheid
+                van andere mensen.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- UNIFORM -->
+
+<section class="card">
+
+    <h2>👕 4. Uniform &amp; Uitrusting</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>Uniformen</h3>
+            <p>
+                Draag altijd het correcte ANWB-uniform tijdens dienst.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Uitrusting</h3>
+            <p>
+                Gebruik de wegenwachtwagen, gereedschappen voor pechhulp en
+                veiligheidsmaterialen zoals verkeerskegels.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Verboden</h3>
+            <p>
+                Persoonlijke wapens zijn niet toegestaan tijdens de dienst.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VOERTUIG -->
+
+<section class="card">
+
+    <h2>🚙 5. Voertuigprocedures</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>Verkeersregels</h3>
+            <p>
+                Volg altijd de verkeersregels. Gebruik sirenes en zwaailichten
+                wanneer dit volgens de serverregels en de situatie nodig is.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Veilig parkeren</h3>
+            <p>
+                Parkeer altijd op een veilige afstand van het incident en
+                bescherm zowel jezelf als andere hulpdiensten.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNICATIE -->
+
+<section class="card">
+
+    <h2>📻 6. Communicatie (Radio &amp; Dispatch)</h2>
+
+    <p>
+        Gebruik altijd je eenheidscode, bijvoorbeeld
+        <strong>ANWB-01</strong> voor de wegenwacht.
+    </p>
+
+    <div class="callout">
+        <strong>Radiocommunicatie:</strong>
+        Wees beknopt, duidelijk en respectvol.
+    </div>
+
+    <ul>
+        <li>Geef duidelijk aan waar je bent.</li>
+        <li>Geef aan naar welke melding je onderweg bent.</li>
+        <li>Geef aan of de situatie veilig is voor andere diensten.</li>
+        <li>Geef updates wanneer de situatie verandert.</li>
+    </ul>
+
+</section>
+
+
+<!-- STATUS CODES -->
+
+<section class="card">
+
+    <h2>📡 7. Status Codes</h2>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Beschrijving</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><strong>Status 1</strong></td>
+                    <td>Beschikbaar</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 2</strong></td>
+                    <td>Onderweg naar melding</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 3</strong></td>
+                    <td>Ter plaatse</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 4</strong></td>
+                    <td>Vervoert voertuig / gesleepte voertuigen</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 5</strong></td>
+                    <td>Bij garage of pechherstelcentrum</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 6</strong></td>
+                    <td>Beschikbaar na melding</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Status 7</strong></td>
+                    <td>Niet beschikbaar (pauze / einde dienst)</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- SPOED -->
+
+<section class="card">
+
+    <h2>🚨 8. Spoed Codes</h2>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td><strong>Code 1</strong></td>
+                    <td>Geen spoed</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Code 2</strong></td>
+                    <td>Urgent, maar niet levensbedreigend</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Code 3</strong></td>
+                    <td>Hoogste spoed, levensbedreigend</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Code 3 (A1)</strong></td>
+                    <td>Spoed, altijd met zwaailichten en sirene</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Code 2 (A2)</strong></td>
+                    <td>Spoed zonder sirene, eventueel met zwaailicht</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Code 1 (B)</strong></td>
+                    <td>Geen spoed, meestal zonder zwaailicht</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- PROCEDURES -->
+
+<section class="card">
+
+    <h2>🔧 9. Procedures ter Plaatse</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>Scene Veiligheid</h3>
+            <p>
+                Zorg altijd voor de veiligheid van jezelf, de klant en het
+                overige verkeer. Zet indien nodig je zwaailichten aan en
+                bescherm de plek met verkeerskegels.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Pechhulp</h3>
+            <p>
+                Help weggebruikers met hun voertuigprobleem.
+            </p>
+
+            <ul>
+                <li>Lekke band vervangen</li>
+                <li>Accu opladen / starten</li>
+                <li>Brandstof bijvullen</li>
+                <li>Kleine reparaties uitvoeren</li>
+                <li>Voertuig naar een garage slepen</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIALE SITUATIES -->
+
+<section class="card">
+
+    <h2>⚠️ 10. Speciale Situaties</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>Ongeval</h3>
+            <p>
+                Bij een ongeval moet je de situatie veiligstellen, de
+                hulpdiensten op de hoogte stellen en indien nodig voertuigen
+                wegslepen.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Autopech</h3>
+            <p>
+                Bied direct hulp. Zorg ervoor dat het voertuig veilig langs
+                de weg staat en bied indien mogelijk tijdelijke reparaties aan.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>Blokkade</h3>
+            <p>
+                Wanneer een weg geblokkeerd is door een voertuig, meld dit dan
+                onmiddellijk aan de centrale en coördineer met de politie om
+                de situatie op te lossen.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SAMENWERKING -->
+
+<section class="card">
+
+    <h2>🤝 11. Samenwerking met Andere Diensten</h2>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <h3>👮 Politie</h3>
+            <p>
+                Werk samen bij verkeersincidenten, ongevallen en
+                verkeersblokkades.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>🚒 Brandweer</h3>
+            <p>
+                Werk samen bij autobranden of wanneer gevaarlijke stoffen
+                betrokken zijn bij het incident.
+            </p>
+        </div>
+
+        <div class="requirement">
+            <h3>🚑 Ambulance</h3>
+            <p>
+                Zorg ervoor dat gewonden veilig kunnen worden geholpen door
+                de ambulance. Sleep voertuigen indien nodig naar de kant
+                of maak voldoende ruimte.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCUMENTATIE -->
+
+<section class="card">
+
+    <h2>📝 12. Documentatie</h2>
+
+    <p>
+        Documenteer altijd incidenten en de verrichte werkzaamheden.
+        Dit kan zowel fysiek als digitaal gebeuren via RP-logs of Discord.
+    </p>
+
+    <div class="callout">
+        <strong>Tip:</strong>
+        Noteer belangrijke informatie over het incident, de locatie,
+        betrokken personen en uitgevoerde werkzaamheden.
+    </div>
+
+</section>
+
+
+<!-- DISCIPLINAIRE MAATREGELEN -->
+
+<section class="card warning">
+
+    <h2>⚖️ 13. Disciplinaire Maatregelen</h2>
+
+    <p>
+        Overtredingen van de regels kunnen leiden tot maatregelen,
+        variërend van een waarschuwing tot tijdelijke of permanente
+        schorsing, afhankelijk van de ernst.
+    </p>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<section class="card">
+
+    <h2>ℹ️ 14. Disclaimer</h2>
+
+    <p>
+        Dit document is opgesteld voor roleplay-doeleinden binnen
+        <strong>Retro Roleplay</strong> en is geen vervanging voor echte
+        wetgeving. Serverregels en protocollen kunnen door het
+        serverbeheer worden aangepast.
+    </p>
+
+</section>
+
+
+<footer class="footer">
+    <strong>Retro Roleplay</strong><br>
+    Pechhulp &amp; Wegenwacht Handboek<br><br>
+    © 2026 Retro Roleplay
+</footer>
+
+</div>
+
+</body>
+</html>
