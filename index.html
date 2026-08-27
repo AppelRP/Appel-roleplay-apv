@@ -44,6 +44,7 @@ body{
     min-height:100vh;
     font-family:"Segoe UI",Inter,Arial,sans-serif;
     color:var(--text);
+
     background:
         radial-gradient(
             ellipse 900px 500px at 50% -120px,
@@ -66,6 +67,7 @@ body{
             #F8FEFF 42%,
             #E9FAFF 100%
         );
+
     overflow-x:hidden;
 }
 
@@ -73,24 +75,51 @@ body::before{
     content:"";
     position:fixed;
     inset:0;
+
     background-image:
-        linear-gradient(rgba(20,170,205,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(20,170,205,.025) 1px,transparent 1px);
+        linear-gradient(
+            rgba(20,170,205,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20,170,205,.025) 1px,
+            transparent 1px
+        );
+
     background-size:42px 42px;
-    mask-image:linear-gradient(to bottom,black,transparent 85%);
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+
     pointer-events:none;
     z-index:-2;
 }
 
 body::after{
     content:"";
+
     position:fixed;
+
     width:850px;
     height:850px;
+
     left:50%;
     top:35%;
+
     transform:translate(-50%,-50%);
-    background:radial-gradient(circle,rgba(73,214,255,.055),transparent 68%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(73,214,255,.055),
+            transparent 68%
+        );
+
     pointer-events:none;
     z-index:-1;
 }
@@ -101,36 +130,51 @@ body::after{
     padding:55px 0 60px;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .header{
     position:relative;
     text-align:center;
+
     padding:48px 25px 50px;
     margin-bottom:30px;
+
     border-radius:32px;
+
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.94),
             rgba(238,251,255,.78)
         );
+
     border:1px solid rgba(255,255,255,.95);
+
     box-shadow:
         0 30px 90px rgba(25,120,150,.14),
         inset 0 1px 0 rgba(255,255,255,.95);
+
     backdrop-filter:blur(22px);
+
     overflow:hidden;
 }
 
 .header::before{
     content:"";
+
     position:absolute;
+
     width:700px;
     height:400px;
+
     top:-330px;
     left:50%;
+
     transform:translateX(-50%);
+
     background:
         radial-gradient(
             ellipse,
@@ -138,61 +182,94 @@ body::after{
             rgba(131,232,255,.10) 40%,
             transparent 72%
         );
+
+    pointer-events:none;
 }
 
 .header::after{
     content:"";
+
     position:absolute;
+
     width:500px;
     height:120px;
+
     bottom:-90px;
     left:50%;
+
     transform:translateX(-50%);
-    background:radial-gradient(
-        ellipse,
-        rgba(73,214,255,.35),
-        transparent 70%
-    );
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(73,214,255,.35),
+            transparent 70%
+        );
+
     filter:blur(12px);
+
+    pointer-events:none;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo{
     position:relative;
     z-index:2;
-    width:125px;
-    height:125px;
-    margin:0 auto 12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.95),
-            rgba(207,247,255,.80)
+
+    width:150px;
+    height:150px;
+
+    margin:0 auto 15px;
+
+    display:block;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 12px 20px
+            rgba(41,180,215,.22)
+        )
+        drop-shadow(
+            0 0 28px
+            rgba(73,214,255,.28)
         );
-    border:2px solid rgba(73,214,255,.30);
-    box-shadow:
-        0 15px 45px rgba(41,180,215,.20),
-        inset 0 1px 0 white;
-    color:var(--blue-2);
-    font-size:54px;
-    animation:logoFloat 4s ease-in-out infinite;
+
+    animation:
+        logoFloat 4s ease-in-out infinite;
 }
 
 @keyframes logoFloat{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-6px)}
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
 }
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
 
 h1{
     position:relative;
     z-index:2;
+
     font-size:clamp(34px,5vw,54px);
+
     font-weight:850;
+
     letter-spacing:-1.8px;
+
     margin-bottom:11px;
+
     background:
         linear-gradient(
             135deg,
@@ -200,90 +277,137 @@ h1{
             #0BAED8 48%,
             #67DFFF 100%
         );
+
     -webkit-background-clip:text;
     background-clip:text;
+
     color:transparent;
 }
 
 .subtitle{
     position:relative;
     z-index:2;
+
     color:var(--text-2);
+
     font-size:16px;
 }
 
 .header-label{
     position:relative;
     z-index:2;
+
     display:inline-flex;
+
     align-items:center;
     gap:9px;
+
     margin-top:20px;
+
     padding:8px 15px;
+
     border-radius:50px;
+
     background:
         linear-gradient(
             135deg,
             rgba(73,214,255,.17),
             rgba(131,232,255,.07)
         );
+
     border:1px solid rgba(73,190,215,.22);
+
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,.8),
         0 8px 25px rgba(45,190,220,.07);
+
     color:var(--blue-dark);
+
     font-size:11px;
+
     font-weight:800;
+
     text-transform:uppercase;
+
     letter-spacing:1.3px;
 }
 
 .header-label span{
     width:7px;
     height:7px;
+
     border-radius:50%;
+
     background:var(--blue-2);
+
     box-shadow:
         0 0 0 4px rgba(73,214,255,.10),
         0 0 14px rgba(73,214,255,.8);
+
     animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
-    0%,100%{opacity:1;transform:scale(1)}
-    50%{opacity:.55;transform:scale(.72)}
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.55;
+        transform:scale(.72);
+    }
 }
 
-/* CARDS */
+
+/* =========================================================
+   CARDS
+========================================================= */
 
 .card{
     position:relative;
+
     margin-bottom:27px;
+
     padding:30px;
+
     border-radius:25px;
+
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.94),
             rgba(247,253,255,.80)
         );
+
     border:1px solid rgba(255,255,255,.95);
+
     box-shadow:
         0 25px 70px rgba(30,110,135,.10),
         inset 0 1px 0 rgba(255,255,255,.95);
+
     backdrop-filter:blur(20px);
+
     overflow:hidden;
-    transition:.28s ease;
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease;
 }
 
 .card::before{
     content:"";
+
     position:absolute;
+
     top:22px;
     bottom:22px;
     left:0;
+
     width:4px;
+
     border-radius:0 8px 8px 0;
+
     background:
         linear-gradient(
             180deg,
@@ -291,48 +415,74 @@ h1{
             var(--blue-2),
             var(--blue-light)
         );
-    box-shadow:0 0 18px rgba(73,214,255,.35);
+
+    box-shadow:
+        0 0 18px rgba(73,214,255,.35);
 }
 
 .card::after{
     content:"";
+
     position:absolute;
+
     width:500px;
     height:220px;
+
     right:-260px;
     top:-170px;
-    background:radial-gradient(
-        ellipse,
-        rgba(73,214,255,.13),
-        transparent 68%
-    );
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(73,214,255,.13),
+            transparent 68%
+        );
+
     pointer-events:none;
 }
 
 .card:hover{
     transform:translateY(-2px);
+
     box-shadow:
         0 30px 85px rgba(25,105,130,.14),
         inset 0 1px 0 rgba(255,255,255,.95);
 }
 
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
 h2{
     position:relative;
+
     display:flex;
+
     align-items:center;
+
     gap:11px;
+
     margin-bottom:21px;
+
     font-size:28px;
+
     font-weight:850;
+
     letter-spacing:-.6px;
+
     color:var(--blue-dark);
 }
 
 h2::after{
     content:"";
+
     flex:1;
+
     height:1px;
+
     margin-left:12px;
+
     background:
         linear-gradient(
             90deg,
@@ -342,7 +492,13 @@ h2::after{
         );
 }
 
-p,li{
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+p,
+li{
     color:var(--text-2);
     line-height:1.72;
 }
@@ -362,48 +518,112 @@ li::marker{
 
 .intro{
     max-width:920px;
+
     margin:0 auto 8px;
+
     text-align:center;
+
     font-size:15px;
 }
 
-/* GRID */
 
-.rank-grid,
+/* =========================================================
+   RANGEN — KOMT NOG
+========================================================= */
+
+.ranks-coming{
+    text-align:center;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(73,214,255,.10),
+            rgba(255,255,255,.70)
+        );
+
+    border:1px dashed rgba(73,190,215,.35);
+
+    color:var(--blue-dark);
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.ranks-coming span{
+    display:block;
+
+    margin-top:6px;
+
+    color:var(--text-3);
+
+    font-size:13px;
+
+    font-weight:500;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
 .requirements{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
     gap:17px;
 }
 
-.rank,
 .requirement{
     position:relative;
-    padding:21px;
+
+    padding:22px;
+
     border-radius:19px;
+
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.96),
             rgba(239,251,255,.84)
         );
+
     border:1px solid rgba(150,210,225,.35);
+
     box-shadow:
         0 8px 25px rgba(25,100,120,.055),
         inset 0 1px 0 rgba(255,255,255,.95);
+
     overflow:hidden;
-    transition:.24s ease;
+
+    transition:
+        transform .24s ease,
+        border-color .24s ease,
+        box-shadow .24s ease;
 }
 
-.rank::after,
 .requirement::before{
     content:"";
+
     position:absolute;
+
     left:0;
     top:20px;
     bottom:20px;
+
     width:3px;
+
     border-radius:0 5px 5px 0;
+
     background:
         linear-gradient(
             180deg,
@@ -412,115 +632,111 @@ li::marker{
         );
 }
 
-.rank:hover,
 .requirement:hover{
     transform:translateY(-5px);
-    border-color:rgba(45,190,220,.40);
+
+    border-color:
+        rgba(45,190,220,.40);
+
     box-shadow:
         0 20px 45px rgba(45,190,220,.12),
         inset 0 1px 0 white;
 }
 
-.rank-number{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-width:40px;
-    height:26px;
-    padding:0 9px;
-    border-radius:8px;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(73,214,255,.17),
-            rgba(131,232,255,.06)
-        );
-    border:1px solid rgba(73,190,215,.20);
-    color:var(--blue-dark);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1px;
-    margin-bottom:8px;
-}
-
-.rank-title{
-    color:var(--text);
-    font-size:18px;
-    font-weight:850;
-    margin-bottom:14px;
-}
-
-.permission{
-    display:flex;
-    align-items:flex-start;
-    gap:8px;
-    margin:7px 0;
-    padding-bottom:6px;
-    font-size:14px;
-    line-height:1.55;
-    color:var(--text-2);
-    border-bottom:1px solid rgba(150,190,205,.16);
-}
-
-.permission:last-child{
-    border-bottom:none;
-}
-
-.permission strong{
-    white-space:nowrap;
-    color:var(--blue-dark);
-}
-
-.requirement{
-    padding:22px;
-}
-
 .requirement h3{
     color:var(--blue-dark);
+
     font-weight:850;
+
     margin-bottom:10px;
 }
 
-/* TABLES */
+
+/* =========================================================
+   TABLES
+========================================================= */
 
 .table-wrap{
     overflow-x:auto;
+
     margin-top:15px;
 }
 
 table{
     width:100%;
+
     border-collapse:collapse;
+
     min-width:500px;
+
     overflow:hidden;
+
     border-radius:15px;
 }
 
 th{
     text-align:left;
+
     padding:15px;
+
     background:
         linear-gradient(
             135deg,
             rgba(73,214,255,.18),
             rgba(131,232,255,.10)
         );
+
     color:var(--blue-dark);
+
     font-size:14px;
 }
 
 td{
     padding:14px 15px;
+
     color:var(--text-2);
-    border-top:1px solid rgba(120,180,195,.16);
-    background:rgba(255,255,255,.45);
+
+    border-top:
+        1px solid
+        rgba(120,180,195,.16);
+
+    background:
+        rgba(255,255,255,.45);
 }
 
 tr:hover td{
-    background:rgba(73,214,255,.055);
+    background:
+        rgba(73,214,255,.055);
 }
 
-/* SPECIAL */
+
+/* =========================================================
+   CALLOUT
+========================================================= */
+
+.callout{
+    margin-top:18px;
+
+    padding:18px 20px;
+
+    border-radius:15px;
+
+    background:
+        rgba(73,214,255,.075);
+
+    border:
+        1px solid
+        rgba(73,190,215,.18);
+}
+
+.callout strong{
+    color:var(--blue-dark);
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
 
 .warning{
     background:
@@ -530,36 +746,41 @@ tr:hover td{
             rgba(255,255,255,.92) 48%,
             rgba(229,250,255,.85)
         );
-    border:1px solid rgba(73,190,215,.20);
+
+    border:
+        1px solid
+        rgba(73,190,215,.20);
 }
 
-.callout{
-    margin-top:18px;
-    padding:18px 20px;
-    border-radius:15px;
-    background:rgba(73,214,255,.075);
-    border:1px solid rgba(73,190,215,.18);
-}
 
-.callout strong{
-    color:var(--blue-dark);
-}
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer{
     position:relative;
+
     text-align:center;
+
     margin-top:38px;
+
     padding:20px;
+
     color:var(--text-3);
+
     font-size:13px;
 }
 
 .footer::before{
     content:"";
+
     display:block;
+
     width:120px;
     height:1px;
+
     margin:0 auto 18px;
+
     background:
         linear-gradient(
             90deg,
@@ -573,86 +794,10 @@ tr:hover td{
     color:var(--blue-dark);
 }
 
-/* MOBILE */
 
-@media(max-width:700px){
-
-    .container{
-        width:calc(100% - 22px);
-        padding:20px 0 32px;
-    }
-
-    .header{
-        padding:30px 15px 40px;
-        border-radius:25px;
-        margin-bottom:19px;
-    }
-
-    .logo{
-        width:100px;
-        height:100px;
-        font-size:43px;
-    }
-
-    h1{
-        font-size:34px;
-        letter-spacing:-1px;
-    }
-
-    .subtitle{
-        font-size:14px;
-        line-height:1.5;
-    }
-
-    .header-label{
-        font-size:10px;
-        letter-spacing:.8px;
-    }
-
-    .card{
-        padding:23px 17px;
-        border-radius:20px;
-        margin-bottom:19px;
-    }
-
-    h2{
-        font-size:23px;
-        line-height:1.25;
-    }
-
-    h2::after{
-        display:none;
-    }
-
-    .rank-grid,
-    .requirements{
-        grid-template-columns:1fr;
-        gap:13px;
-    }
-
-    .intro{
-        font-size:14px;
-    }
-}
-
-@media(max-width:400px){
-
-    h1{
-        font-size:29px;
-    }
-
-    h2{
-        font-size:21px;
-    }
-
-    .permission{
-        font-size:13px;
-    }
-
-    .rank-title{
-        font-size:17px;
-    }
-}
+/* =========================================================
+   SCROLLBAR
+========================================================= */
 
 ::-webkit-scrollbar{
     width:9px;
@@ -669,7 +814,97 @@ tr:hover td{
             var(--blue-2),
             var(--blue-light)
         );
+
     border-radius:20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .container{
+        width:calc(100% - 22px);
+
+        padding:20px 0 32px;
+    }
+
+    .header{
+        padding:30px 15px 40px;
+
+        border-radius:25px;
+
+        margin-bottom:19px;
+    }
+
+    .logo{
+        width:105px;
+        height:105px;
+    }
+
+    h1{
+        font-size:34px;
+
+        letter-spacing:-1px;
+    }
+
+    .subtitle{
+        font-size:14px;
+
+        line-height:1.5;
+    }
+
+    .header-label{
+        font-size:10px;
+
+        letter-spacing:.8px;
+    }
+
+    .card{
+        padding:23px 17px;
+
+        border-radius:20px;
+
+        margin-bottom:19px;
+    }
+
+    h2{
+        font-size:23px;
+
+        line-height:1.25;
+    }
+
+    h2::after{
+        display:none;
+    }
+
+    .requirements{
+        grid-template-columns:1fr;
+
+        gap:13px;
+    }
+
+    .intro{
+        font-size:14px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:400px){
+
+    h1{
+        font-size:29px;
+    }
+
+    h2{
+        font-size:21px;
+    }
 }
 </style>
 </head>
@@ -680,7 +915,12 @@ tr:hover td{
 
 <header class="header">
 
-    <div class="logo">🚗</div>
+    <!-- LOGO RETRO ROLEPLAY -->
+    <img
+        class="logo"
+        src="https://i.ibb.co/bjqBhFMW/IMG-8995.png"
+        alt="Retro Roleplay Pechhulp Logo"
+    >
 
     <h1>Retro Roleplay</h1>
 
@@ -690,13 +930,15 @@ tr:hover td{
 
     <div class="header-label">
         <span></span>
-        ANWB • PECHHULP • RETRO ROLEPLAY
+        PECHHULP • RETRO ROLEPLAY
     </div>
 
 </header>
 
 
-<!-- INLEIDING -->
+<!-- =====================================================
+     INLEIDING
+===================================================== -->
 
 <section class="card">
 
@@ -704,7 +946,7 @@ tr:hover td{
 
     <p class="intro">
         Dit document is opgesteld om de procedures en richtlijnen voor de
-        <strong>ANWB / Pechhulp van Retro Roleplay</strong> te standaardiseren.
+        <strong>Pechhulp van Retro Roleplay</strong> te standaardiseren.
         Het biedt duidelijkheid over de rollen, verantwoordelijkheden en
         procedures bij het verlenen van hulp bij pech en noodgevallen op de weg.
     </p>
@@ -712,54 +954,27 @@ tr:hover td{
 </section>
 
 
-<!-- RANGEN -->
+<!-- =====================================================
+     RANGEN
+===================================================== -->
 
 <section class="card">
 
     <h2>👨‍🔧 2. Structuur &amp; Rangen</h2>
 
-    <div class="rank-grid">
-
-        <div class="rank">
-            <div class="rank-number">01</div>
-            <div class="rank-title">Stagiair</div>
-            <div class="permission">
-                In opleiding en assisteert ervaren medewerkers.
-            </div>
-        </div>
-
-        <div class="rank">
-            <div class="rank-number">02</div>
-            <div class="rank-title">Wegenwacht</div>
-            <div class="permission">
-                Verantwoordelijk voor het verlenen van pechhulp, zoals het
-                slepen van voertuigen, banden verwisselen en brandstof bijvullen.
-            </div>
-        </div>
-
-        <div class="rank">
-            <div class="rank-number">03</div>
-            <div class="rank-title">Senior Wegenwacht</div>
-            <div class="permission">
-                Leidinggevend bij grotere pechgevallen en verantwoordelijk
-                voor de coördinatie van meerdere teams.
-            </div>
-        </div>
-
-        <div class="rank">
-            <div class="rank-number">04</div>
-            <div class="rank-title">Hoofd Wegenwacht</div>
-            <div class="permission">
-                Algemene leiding van de ANWB-dienst binnen Retro Roleplay.
-            </div>
-        </div>
-
+    <div class="ranks-coming">
+        Rangen komen nog.
+        <span>
+            De rangstructuur en bijbehorende bevoegdheden worden later toegevoegd.
+        </span>
     </div>
 
 </section>
 
 
-<!-- GEDRAGSREGELS -->
+<!-- =====================================================
+     GEDRAGSREGELS
+===================================================== -->
 
 <section class="card">
 
@@ -810,7 +1025,9 @@ tr:hover td{
 </section>
 
 
-<!-- UNIFORM -->
+<!-- =====================================================
+     UNIFORM
+===================================================== -->
 
 <section class="card">
 
@@ -821,14 +1038,14 @@ tr:hover td{
         <div class="requirement">
             <h3>Uniformen</h3>
             <p>
-                Draag altijd het correcte ANWB-uniform tijdens dienst.
+                Draag altijd het correcte uniform tijdens dienst.
             </p>
         </div>
 
         <div class="requirement">
             <h3>Uitrusting</h3>
             <p>
-                Gebruik de wegenwachtwagen, gereedschappen voor pechhulp en
+                Gebruik de pechhulpwagen, gereedschappen voor pechhulp en
                 veiligheidsmaterialen zoals verkeerskegels.
             </p>
         </div>
@@ -845,7 +1062,9 @@ tr:hover td{
 </section>
 
 
-<!-- VOERTUIG -->
+<!-- =====================================================
+     VOERTUIG
+===================================================== -->
 
 <section class="card">
 
@@ -874,7 +1093,9 @@ tr:hover td{
 </section>
 
 
-<!-- COMMUNICATIE -->
+<!-- =====================================================
+     COMMUNICATIE
+===================================================== -->
 
 <section class="card">
 
@@ -882,7 +1103,7 @@ tr:hover td{
 
     <p>
         Gebruik altijd je eenheidscode, bijvoorbeeld
-        <strong>ANWB-01</strong> voor de wegenwacht.
+        <strong>PECH-01</strong> voor de pechhulp.
     </p>
 
     <div class="callout">
@@ -900,7 +1121,9 @@ tr:hover td{
 </section>
 
 
-<!-- STATUS CODES -->
+<!-- =====================================================
+     STATUS CODES
+===================================================== -->
 
 <section class="card">
 
@@ -918,6 +1141,7 @@ tr:hover td{
             </thead>
 
             <tbody>
+
                 <tr>
                     <td><strong>Status 1</strong></td>
                     <td>Beschikbaar</td>
@@ -952,6 +1176,7 @@ tr:hover td{
                     <td><strong>Status 7</strong></td>
                     <td>Niet beschikbaar (pauze / einde dienst)</td>
                 </tr>
+
             </tbody>
 
         </table>
@@ -961,7 +1186,9 @@ tr:hover td{
 </section>
 
 
-<!-- SPOED -->
+<!-- =====================================================
+     SPOED
+===================================================== -->
 
 <section class="card">
 
@@ -1019,7 +1246,9 @@ tr:hover td{
 </section>
 
 
-<!-- PROCEDURES -->
+<!-- =====================================================
+     PROCEDURES
+===================================================== -->
 
 <section class="card">
 
@@ -1028,16 +1257,21 @@ tr:hover td{
     <div class="requirements">
 
         <div class="requirement">
+
             <h3>Scene Veiligheid</h3>
+
             <p>
                 Zorg altijd voor de veiligheid van jezelf, de klant en het
                 overige verkeer. Zet indien nodig je zwaailichten aan en
                 bescherm de plek met verkeerskegels.
             </p>
+
         </div>
 
         <div class="requirement">
+
             <h3>Pechhulp</h3>
+
             <p>
                 Help weggebruikers met hun voertuigprobleem.
             </p>
@@ -1049,6 +1283,7 @@ tr:hover td{
                 <li>Kleine reparaties uitvoeren</li>
                 <li>Voertuig naar een garage slepen</li>
             </ul>
+
         </div>
 
     </div>
@@ -1056,7 +1291,9 @@ tr:hover td{
 </section>
 
 
-<!-- SPECIALE SITUATIES -->
+<!-- =====================================================
+     SPECIALE SITUATIES
+===================================================== -->
 
 <section class="card">
 
@@ -1065,29 +1302,38 @@ tr:hover td{
     <div class="requirements">
 
         <div class="requirement">
+
             <h3>Ongeval</h3>
+
             <p>
                 Bij een ongeval moet je de situatie veiligstellen, de
                 hulpdiensten op de hoogte stellen en indien nodig voertuigen
                 wegslepen.
             </p>
+
         </div>
 
         <div class="requirement">
+
             <h3>Autopech</h3>
+
             <p>
                 Bied direct hulp. Zorg ervoor dat het voertuig veilig langs
                 de weg staat en bied indien mogelijk tijdelijke reparaties aan.
             </p>
+
         </div>
 
         <div class="requirement">
+
             <h3>Blokkade</h3>
+
             <p>
                 Wanneer een weg geblokkeerd is door een voertuig, meld dit dan
                 onmiddellijk aan de centrale en coördineer met de politie om
                 de situatie op te lossen.
             </p>
+
         </div>
 
     </div>
@@ -1095,7 +1341,9 @@ tr:hover td{
 </section>
 
 
-<!-- SAMENWERKING -->
+<!-- =====================================================
+     SAMENWERKING
+===================================================== -->
 
 <section class="card">
 
@@ -1104,28 +1352,37 @@ tr:hover td{
     <div class="requirements">
 
         <div class="requirement">
+
             <h3>👮 Politie</h3>
+
             <p>
                 Werk samen bij verkeersincidenten, ongevallen en
                 verkeersblokkades.
             </p>
+
         </div>
 
         <div class="requirement">
+
             <h3>🚒 Brandweer</h3>
+
             <p>
                 Werk samen bij autobranden of wanneer gevaarlijke stoffen
                 betrokken zijn bij het incident.
             </p>
+
         </div>
 
         <div class="requirement">
+
             <h3>🚑 Ambulance</h3>
+
             <p>
                 Zorg ervoor dat gewonden veilig kunnen worden geholpen door
                 de ambulance. Sleep voertuigen indien nodig naar de kant
                 of maak voldoende ruimte.
             </p>
+
         </div>
 
     </div>
@@ -1133,7 +1390,9 @@ tr:hover td{
 </section>
 
 
-<!-- DOCUMENTATIE -->
+<!-- =====================================================
+     DOCUMENTATIE
+===================================================== -->
 
 <section class="card">
 
@@ -1145,15 +1404,20 @@ tr:hover td{
     </p>
 
     <div class="callout">
+
         <strong>Tip:</strong>
+
         Noteer belangrijke informatie over het incident, de locatie,
         betrokken personen en uitgevoerde werkzaamheden.
+
     </div>
 
 </section>
 
 
-<!-- DISCIPLINAIRE MAATREGELEN -->
+<!-- =====================================================
+     DISCIPLINAIRE MAATREGELEN
+===================================================== -->
 
 <section class="card warning">
 
@@ -1168,7 +1432,9 @@ tr:hover td{
 </section>
 
 
-<!-- DISCLAIMER -->
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
 
 <section class="card">
 
@@ -1184,10 +1450,18 @@ tr:hover td{
 </section>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="footer">
+
     <strong>Retro Roleplay</strong><br>
+
     Pechhulp &amp; Wegenwacht Handboek<br><br>
+
     © 2026 Retro Roleplay
+
 </footer>
 
 </div>
